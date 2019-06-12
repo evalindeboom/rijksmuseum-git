@@ -527,9 +527,57 @@ footer {
 /* ========================================== */
 
 .form-group {
-	padding-bottom:10rem;
+	padding-bottom:5rem;
 }
 
+.btn-primary {
+	background-color: rgb(216, 197, 175);
+	color:rgb(71, 66, 60);
+	border: 10px solid #ffffff;
+	margin:10px;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.btn-primary:hover {
+	background-color:rgb(71, 66, 60);
+	color:rgb(216, 197, 175);
+	border: 10px solid #ffffff;
+	margin:10px;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.btn-primary:active {
+	background-color:rgb(71, 66, 60);
+	color:rgb(216, 197, 175);
+	border: 10px solid #ffffff;
+	margin:10px;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.btn-primary:visited {
+	background-color:rgb(71, 66, 60);
+	color:rgb(216, 197, 175);
+	border: 10px solid #ffffff;
+	margin:10px;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+td {
+	width:250px;
+	padding:10px;
+	background-color:rgb(249, 248, 247);
+	border-bottom:17px solid white;
+}
+
+#example3-container {
+	width: 40%;
+	margin-left:30%;
+  margin-right:30%;
+}
 
 
 /* Responsive Mobile styles
