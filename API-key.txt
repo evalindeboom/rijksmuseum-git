@@ -1,0 +1,4 @@
+RIJKSMUSEUM API key = CdGbwlYs
+https://www.rijksmuseum.nl/api/en/collection?q=Q&key=CdGbwlYs&format=json
+
+!!!Make sure to use "en" instead of "nl"!!!

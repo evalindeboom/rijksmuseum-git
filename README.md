@@ -1,2 +1,2 @@
 # rijksmuseum-git
-Dit is voor het rijksmuseum project
+Dit is voor het RIJKSMUSEUM project.
