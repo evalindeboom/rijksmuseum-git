@@ -119,7 +119,7 @@ img {
   background: url('../images/rijksmuseum-bg.jpg') no-repeat;
 	background-opacity:0.5;
   height: 60vh !important;
-  min-height: 520px;
+  min-height: 280px;
   padding-top: 150px !important;
 }
 .header-two {
@@ -522,6 +522,15 @@ footer {
 .social-icon li a:hover {
   background: #ffffff;
 }
+
+/* Search Engine
+/* ========================================== */
+
+.form-group {
+	padding-bottom:10rem;
+}
+
+
 
 /* Responsive Mobile styles
 /* ========================================== */
