@@ -124,7 +124,11 @@
 <script src="js/underscore-min.js"></script>
 <script src="js/jquery.scrollintoview.min.js"></script>
 
+<script src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>$("#highlight-styles").html()</script>
 <script id="myQuery" type="example">
+
 		 function search(query) {
 			 return $.getJSON("https://www.rijksmuseum.nl/api/en/collection?q=Q&key=CdGbwlYs&format=json".replace("Q", query));
 		 }
@@ -176,10 +180,6 @@
         $($button.data("target")).scrollintoview(false);
       });
     </script>
-
-	  <script src="js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>$("#highlight-styles").html()</script>
 
 </body>
 </html>
