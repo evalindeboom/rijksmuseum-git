@@ -96,7 +96,7 @@
 	<form class="form-inline" role="form" >
 		<div class="form-group">
 			<label class="sr-only">Query</label>
-			<input id="query" type="search" class="form-control" placeholder="ex. 'Vincent van Gogh'"/>
+			<input id="query" type="search" class="form-control" placeholder="ex. 'Rembrandt'"/>
 		</div>
 		<div class="form-group">
 			<button data-action="run"
@@ -110,8 +110,6 @@
 </div>
 <table id="example3-container" class="example3-container target table-striped">
 </table>
-
-<br><button type="button" onclick="alert('Object(s) added to interests')">Add Object(s) To Interests</button><br>
 
 <br><div class="submit-button">
 	<a href="personaltour.html" class="submit-button-link">Plan My Personal Tour</a>
@@ -158,7 +156,7 @@
 
 					 var $row = $(
 						 '<tr>'+
-						 '<td> <img src="'+ object.webImage.url + '">' + object.principalOrFirstMaker + " <br> " + object.longTitle + " <br> " +
+						 '<td> <img src="'+ object.webImage.url + '">' + object.principalOrFirstMaker + " <br> " + object.longTitle + " <br> " + '<input type="checkbox" name="Interested" value="Interested"> Interested<br>' +
 						 '</tr>').appendTo($table);
 
 
