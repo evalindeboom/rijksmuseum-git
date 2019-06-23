@@ -81,105 +81,105 @@
 								</div>
 
 
-<!-- Query
-================================================== -->
-<div class="iso-section wow fadeInUp" data-wow-delay="1.5s">
-	<form class="form-inline" role="form" >
-		<div class="form-group">
-			<label class="sr-only">Query</label>
-			<input id="query" type="search" class="form-control" placeholder="ex. 'Rembrandt'"/>
-		</div>
-		<div class="form-group">
-			<button data-action="run"
-				data-code="#myQuery"
-				data-target="#example3-container"
-				class="btn btn-primary">search</button>
-		</div>
-	</form>
+								<!-- Query
+								================================================== -->
+								<div class="iso-section wow fadeInUp" data-wow-delay="1.5s">
+									<form class="form-inline" role="form" >
+										<div class="form-group">
+											<label class="sr-only">Query</label>
+											<input id="query" type="search" class="form-control" placeholder="ex. 'Rembrandt'"/>
+										</div>
+										<div class="form-group">
+											<button data-action="run"
+												data-code="#myQuery"
+												data-target="#example3-container"
+												class="btn btn-primary">search</button>
+										</div>
+									</form>
 
 
-</div>
-<table id="example3-container" class="example3-container target table-striped">
-</table>
+								</div>
+								<table id="example3-container" class="example3-container target table-striped">
+								</table>
 
-<br><div class="submit-button">
-	<a href="my-guide.html" class="submit-button-link">Plan My Personal Tour</a>
-</div>
-
-
-
-<!-- Javascript/API
-================================================== -->
-<script src="jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/imagesloaded.min.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/jquery.scrollintoview.min.js"></script>
-<script src="js/scale.fix.js"></script>
-<script src="js/underscore-min.js"></script>
-<script src="js/wow.min.js"></script>
-
-<div class="search-table">
-
-<script id="myQuery" type="example">
-
-		 function search(query) {
-			 return $.getJSON("https://www.rijksmuseum.nl/api/en/collection?q=Q&key=CdGbwlYs&format=json".replace("Q", query));
-		 }
-
-		 function pictures(object) {
-			 return $("<div>")
-				 .addClass("pictures")
-				 .css("background-image", "url(" + object.webImage.url.replace("s0", "s128") +")");
-		 }
-
-		 search($("#query").val())
-			 .done(function(results) {
-				 $("#example3-container").empty();
-
-				 var $table = $("#example3-container");
-				 $table.html("");
-
-				 $.each(results.artObjects, function(index, object) {
-					 console.log(object);
-
-					 var $row = $(
-						 '<tr>'+
-						 '<td> <img src="'+ object.webImage.url + '">' + object.principalOrFirstMaker + " <br> " + object.longTitle + " <br> " + '<input type="checkbox" name="Interested" value="Interested"> Interested<br>' +
-						 '</tr>').appendTo($table);
+								<br><div class="submit-button">
+									<a href="my-guide.html" class="submit-button-link">Plan My Personal Tour</a>
+								</div>
 
 
-					 $row.find("pictures").append(pictures(object));
 
-					 $row.on("click", function() {
-						 document.location = window.open(object.links.web, "_blank", "width=750, height=750");
-						 window.location.assign("query.html")
-					 });
-				 })
-			 });
-	 </script>
+								<!-- Javascript/API
+								================================================== -->
+								<script src="jquery-1.10.2.min.js"></script>
+								<script src="js/bootstrap.min.js"></script>
+								<script src="js/custom.js"></script>
+								<script src="js/imagesloaded.min.js"></script>
+								<script src="js/isotope.js"></script>
+								<script src="js/jquery.js"></script>
+								<script src="js/jquery.scrollintoview.min.js"></script>
+								<script src="js/scale.fix.js"></script>
+								<script src="js/underscore-min.js"></script>
+								<script src="js/wow.min.js"></script>
 
-	 <script>
-      $("code[data-code]").each(function(i,el){
-          $(el).text($($(el).data("code")).text());
-      })
+								<div class="search-table">
 
-      $("[data-action=run]").click(function(evt){
-        evt.preventDefault();
-        var $button = $(this);
-        eval ($($button.data("code")).text());
+								<script id="myQuery" type="example">
 
-        $($button.data("target")).scrollintoview(false);
-      });
-    </script>
+										 function search(query) {
+											 return $.getJSON("https://www.rijksmuseum.nl/api/en/collection?q=Q&key=CdGbwlYs&format=json".replace("Q", query));
+										 }
 
-	  <script src="js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>$("#highlight-styles").html()</script>
+										 function pictures(object) {
+											 return $("<div>")
+												 .addClass("pictures")
+												 .css("background-image", "url(" + object.webImage.url.replace("s0", "s128") +")");
+										 }
 
-</div>
+										 search($("#query").val())
+											 .done(function(results) {
+												 $("#example3-container").empty();
+
+												 var $table = $("#example3-container");
+												 $table.html("");
+
+												 $.each(results.artObjects, function(index, object) {
+													 console.log(object);
+
+													 var $row = $(
+														 '<tr>'+
+														 '<td> <img src="'+ object.webImage.url + '">' + object.principalOrFirstMaker + " <br> " + object.longTitle + " <br> " + '<input type="checkbox" name="Interested" value="Interested"> Interested<br>' +
+														 '</tr>').appendTo($table);
+
+
+													 $row.find("pictures").append(pictures(object));
+
+													 $row.on("click", function() {
+														 document.location = window.open(object.links.web, "_blank", "width=750, height=750");
+														 window.location.assign("query.html")
+													 });
+												 })
+											 });
+									 </script>
+
+									 <script>
+								      $("code[data-code]").each(function(i,el){
+								          $(el).text($($(el).data("code")).text());
+								      })
+
+								      $("[data-action=run]").click(function(evt){
+								        evt.preventDefault();
+								        var $button = $(this);
+								        eval ($($button.data("code")).text());
+
+								        $($button.data("target")).scrollintoview(false);
+								      });
+								    </script>
+
+									  <script src="js/highlight.pack.js"></script>
+								    <script>hljs.initHighlightingOnLoad();</script>
+								    <script>$("#highlight-styles").html()</script>
+
+								</div>
 
 
 </body>
