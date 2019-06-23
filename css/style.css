@@ -23,7 +23,13 @@ html,body {
 
 html {
   font-size: 100%;
+	background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+	background-size:100%;
+
 }
+
 
 
 /* Typography
@@ -131,9 +137,7 @@ img {
 .header-four {
   background: url('../images/header-four-bg.jpg') no-repeat;
 }
-.header-five {
-  background: url('../images/header-five-bg.jpg') no-repeat;
-}
+
 
 /* Portfolio section styles
 /* ========================================== */
@@ -371,6 +375,7 @@ img {
   border-color: transparent;
   color: #ffffff;
 }
+
 
 #single-post blockquote {
   margin-top: 32px;
